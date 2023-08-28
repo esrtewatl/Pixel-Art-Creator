@@ -1,0 +1,72 @@
+/* PixelArtCanvas.css */
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  .undo-button{
+    margin-right: 3em;
+    width: 5em;
+    height: auto;
+    background-color: black;
+    color: red;
+    font-weight: bold;
+  }
+  
+  .pixel-grid {
+    margin-right: 1em;
+    display: grid;
+    grid-template-columns: repeat(20, 40px); /* 20 columns with 40px width each */
+    grid-template-rows: repeat(10, 40px); /* 10 rows with 40px height each */
+    gap: 1px;
+    border: 1px solid #ccc;
+    background-color: white;
+    max-width: 90%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .pixel-cell {
+    background-color: rgb(243, 235, 235);
+    cursor: pointer;
+    transition: background-color 0.5s;
+    width: 100%;
+    height: 100%;
+    border: solid 1px #622020;
+  }
+  
+  .pixel-cell:hover {
+    background-color: #42a5f5;
+  }
+   
+  .pixel-row {
+    color: white;
+    border: solid 1px #ccc;
+  }
+  /* ... (your existing styles) */
+
+.save-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .save-button:hover {
+    background-color: #007bb2;
+  }
+  
+  /* Responsive layout adjustments */
+  @media (max-width: 768px) {
+    .pixel-grid {
+      grid-template-columns: repeat(10, 40px); /* Adjust columns for smaller screens */
+      grid-template-rows: repeat(20, 40px); /* Adjust rows for smaller screens */
+      max-width: 100%;
+    }
+  }
+  
